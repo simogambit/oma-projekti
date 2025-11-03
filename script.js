@@ -59,4 +59,32 @@ document.addEventListener("DOMContentLoaded", () => {
       startCooldown(60); // 60 sekunnin cooldown
     }
   });
+
+  // --- Automaattinen päivitys switch ---
+  const autoToggle = document.getElementById("auto-toggle");
+  let autoInterval = null;
+
+  if (autoToggle) {
+    autoToggle.addEventListener("change", () => {
+      if (autoToggle.checked) {
+        // Automaattinen tila päälle
+        updateBtn.disabled = true;
+        updateBtn.classList.add("cooldown");
+        updateBtn.textContent = "Automaattinen päivitys";
+        timerDisplay.textContent = "Automaattinen";
+
+        // Päivitä heti ja sitten 60 sekunnin välein
+        fetchPrices();
+        autoInterval = setInterval(fetchPrices, 60000);
+      } else {
+        // Pois päältä
+        clearInterval(autoInterval);
+        autoInterval = null;
+        timerDisplay.textContent = "";
+        updateBtn.disabled = false;
+        updateBtn.classList.remove("cooldown");
+        updateBtn.textContent = "Päivitä hinnat";
+      }
+    });
+  }
 });

@@ -1,9 +1,8 @@
 /* Sivun yleisasettelu ja taustat */
 body {
   display: flex;
-  
   font-family: monospace;
-  background-color: #f2f2f2;
+  background-color: #EDE8D0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +22,7 @@ body {
 h1 {
   margin: 0;
   font-size: 25px;
+  border-bottom: #333 2px solid ;
 }
 
 /* Päivitä napin tyyli ja koko */
@@ -58,13 +58,13 @@ h1 {
 /* Päälaatikko joka sisältää kryptovaluutat */
 .iso {
   border: 3px solid black;
-  background: white;
+  background:#f6f6f6;
   width: 480px;
   padding: 20px;
   box-shadow: 3px 3px 0px black;
 }
 
-/* Yksi kryptovaluutta-rivi */
+/* Yksi kryptovaluutta rivi */
 .krypto {
   display: flex;
   justify-content: space-between;
@@ -97,10 +97,10 @@ h1 {
   font-size: 17px;
 }
 
-/* Info-laatikko */
+/* Info */
 .info {
   border: 3px solid black;
-  background: white;
+  background: #f6f6f6;
   width: 480px;
   padding: 20px;
   box-shadow: 3px 3px 0px black;
