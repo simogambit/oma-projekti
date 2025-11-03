@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kryptovaluuttojen hinnat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Kryptovaluuttojen hinnat</h1>
+    <div class="nappi-alue">
+      <button id="update-all">Päivitä hinnat</button>
+      <span id="timer"></span>
+    </div>
+  </div>
+
+  <div class="iso">
+
+    <div class="krypto">
+      <div class="vasen">
+        <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" alt="Bitcoin">
+        <h2>(BTC)Bitcoin</h2>
+      </div>
+      <span id="btc-price">-</span>
+    </div>
+
+    <div class="krypto">
+      <div class="vasen">
+        <img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" alt="Ethereum">
+        <h2>(ETH)Ethereum</h2>
+      </div>
+      <span id="eth-price">-</span>
+    </div>
+
+    <div class="krypto">
+      <div class="vasen">
+        <img src="https://assets.coingecko.com/coins/images/4128/large/solana.png" alt="Solana">
+        <h2>(SOL)Solana</h2>
+      </div>
+      <span id="sol-price">-</span>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <h2>Info</h2>
+    <p>
+      Tältä sivulta voit seurata kolmen suositun krypton hintoja.
+      Vihreästä napista painamalla voit päivittää hinnat. Kun nappia painetaan, se muuttuu punaiseksi ja menee "jäähylle" 60 sekuniksi. Tämä cooldown tapahtuu siksi, koska 
+      käytän Coingeckon ilmaista APIa, jotta saan kryptojen hinnat näkymään sivulla. Tämä ilmainen API sallii vain tietyn määrän hinnanpäivityspyyntöjä minuutissa. 
+      Mikäli se ylittyy, hintojen tilalle tulee viesti "Virhe". Sivua tehdessäni käytin apuna Chatgpt:tä esim: cooldown-toiminnon tekemiseen, sivun ulkoasun muokkaamiseen ja muuhun sommitteluun.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
